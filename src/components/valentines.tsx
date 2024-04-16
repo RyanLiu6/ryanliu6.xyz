@@ -1,10 +1,9 @@
-import { h } from "preact"
 import { useState } from "preact/hooks";
 
 
 // The base code is directly from `https://gist.github.com/tnarla/0c09a11fea366145ba684fe6ebf578c5`.
 // Slight modifications were made to loop the phrases and some tailwind styling
-const Valentines = () => {
+const ValentinesPage = () => {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
   const [loop, setLoop] = useState(0);
@@ -81,4 +80,4 @@ const Valentines = () => {
   );
 }
 
-export default Valentines;
+export default ValentinesPage;
