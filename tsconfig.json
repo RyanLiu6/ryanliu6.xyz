@@ -6,6 +6,6 @@
       "@/*": ["*"]
     },
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "jsxImportSource": "preact",
   }
 }
