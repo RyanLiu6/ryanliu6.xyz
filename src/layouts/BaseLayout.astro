@@ -1,14 +1,15 @@
 ---
 interface Props {
-  pageTitle: string
+  pageName: string,
+  pageTitle: string,
 }
 
 import Header from "@/components/Header.tsx";
 import Footer from "@/components/Footer.tsx";
 import { contentBorder, bodyBorder } from "@/components/utils";
 
-const { pageTitle } = Astro.props;
-const titleWithName: string = pageTitle.trim() + " - Ryan Liu";
+const { pageName, pageTitle } = Astro.props;
+const nameWithName: string = pageName.trim() + " - Ryan Liu";
 ---
 <html lang="en">
 	<head>
@@ -16,7 +17,7 @@ const titleWithName: string = pageTitle.trim() + " - Ryan Liu";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{titleWithName}</title>
+		<title>{nameWithName}</title>
 	</head>
 	<body class="bg-fuchsia-50/50">
 		<div class={contentBorder}>
