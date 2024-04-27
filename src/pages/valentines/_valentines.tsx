@@ -1,14 +1,13 @@
 import { useState } from "react";
 
-
 // The base code is directly from `https://gist.github.com/tnarla/0c09a11fea366145ba684fe6ebf578c5`.
 // Slight modifications were made to loop the phrases and some tailwind styling
 const ValentinesPage = () => {
-  const [noCount, setNoCount] = useState(0);
-  const [yesPressed, setYesPressed] = useState(false);
-  const [loop, setLoop] = useState(0);
+  const [noCount, setNoCount] = useState<number>(0);
+  const [yesPressed, setYesPressed] = useState<boolean>(false);
+  const [loop, setLoop] = useState<number>(0);
 
-  const phrases = [
+  const phrases: string[] = [
     "No",
     "Are you sure?",
     "Really sure?",
@@ -27,7 +26,7 @@ const ValentinesPage = () => {
     "You're breaking my heart ;(",
   ];
 
-  let yesButtonSize = 0;
+  let yesButtonSize: number = 0;
 
   if (loop > 0) {
     yesButtonSize = (noCount + loop * phrases.length) * 20 + 16;

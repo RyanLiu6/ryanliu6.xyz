@@ -1,0 +1,31 @@
+---
+interface Props {
+  pageTitle: string
+}
+
+import Header from "@/components/Header.tsx";
+import Footer from "@/components/Footer.tsx";
+import { contentBorder, bodyBorder } from "@/components/utils";
+
+const { pageTitle } = Astro.props;
+const titleWithName: string = pageTitle.trim() + " - Ryan Liu";
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{titleWithName}</title>
+	</head>
+	<body class="bg-fuchsia-50/50">
+		<div class={contentBorder}>
+			<Header client:load />
+			<div class={bodyBorder}>
+				<h1 class="text-3xl xfont-bold">{pageTitle}</h1>
+			</div>
+			<slot />
+			<Footer />
+		</div>
+	</body>
+</html>
