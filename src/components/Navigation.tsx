@@ -7,7 +7,7 @@ interface NavigationProps {
 }
 
 const Navigation = ({ extraClass }: NavigationProps) => {
-  const linkClassName = classNames("transition", "hover:text-cyan-500")
+  const linkClassName = classNames("font-medium", "transition", "hover:text-cyan-500")
 
   let navClass = classNames("flex", "flex-wrap", "justify-center", "gap-6")
   if (extraClass) {

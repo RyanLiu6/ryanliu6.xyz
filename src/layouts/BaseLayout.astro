@@ -1,14 +1,15 @@
 ---
 interface Props {
   pageName: string,
-  pageTitle: string,
 }
+
+import { ViewTransitions } from 'astro:transitions';
 
 import Header from "@/components/Header.tsx";
 import Footer from "@/components/Footer.tsx";
-import { contentBorder, bodyBorder } from "@/components/utils";
+import { mainBorder, bodyBorder } from "@/components/utils";
 
-const { pageName, pageTitle } = Astro.props;
+const { pageName } = Astro.props;
 const nameWithName: string = pageName.trim() + " - Ryan Liu";
 ---
 <html lang="en">
@@ -17,16 +18,14 @@ const nameWithName: string = pageName.trim() + " - Ryan Liu";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions />
 		<title>{nameWithName}</title>
 	</head>
-	<body class="bg-fuchsia-50/50">
-		<div class={contentBorder}>
-			<Header client:load />
-			<div class={bodyBorder}>
-				<h1 class="text-3xl xfont-bold">{pageTitle}</h1>
-			</div>
+	<body class={mainBorder}>
+		<Header client:load />
+		<main class={bodyBorder}>
 			<slot />
-			<Footer />
-		</div>
+		</main>
+		<Footer />
 	</body>
 </html>

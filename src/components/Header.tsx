@@ -2,21 +2,25 @@ import classNames from "classnames";
 
 import Menu from "@/components/Menu";
 import Navigation from "@/components/Navigation";
-import ThemeButton from "@/components/Theme";
-import { marginalBorder } from "@/components/utils";
+import ThemeIcon from "@/components/ThemeIcon";
+import { marginalBorder, shadowBorder } from "@/components/utils";
 
 const Header = () => {
   const headerClass = classNames(marginalBorder, "flex flex-col")
+  const navClass = classNames(shadowBorder, "hidden md:flex")
+  const menuClass = classNames(shadowBorder, "flex md:hidden")
 
   return (
     <header>
       <div className={headerClass}>
       <div className="relative flex justify-between">
         <div className="flex justify-center flex-1">
-          <Navigation extraClass="hidden md:flex" />
-          <Menu extraClass="flex md:hidden" />
+          <Navigation extraClass={navClass} />
+          <Menu extraClass={menuClass} />
         </div>
-        <ThemeButton />
+        <div className="flex rounded-lg p-2 transition hover:bg-fuchsia-200/20 hover:dark:bg-zinc-700 hover:shadow-lg">
+          <ThemeIcon />
+        </div>
       </div>
     </div>
     </header>
