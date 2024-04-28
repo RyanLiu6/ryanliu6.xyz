@@ -17,7 +17,7 @@ const Navigation = ({ extraClass }: NavigationProps) => {
   return (
     <nav className={navClass}>
       {navList.map((item) => (
-        <a className={linkClassName} href={item.href}>{item.name}</a>
+        <a className={linkClassName} key={item.name} href={item.href}>{item.name}</a>
       ))}
     </nav>
   )
