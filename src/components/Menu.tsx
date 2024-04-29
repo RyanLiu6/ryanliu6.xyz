@@ -1,21 +1,14 @@
 // Base code from: https://tailwindui.com/components/marketing/elements/flyout-menus
 
-import { Fragment } from "react"
-import classNames from "classnames";
-import { Popover, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 import { navList } from "@/components/utils";
 
-interface MenuProps {
-  extraClass?: string,
-}
-
-const Menu = ({ extraClass }: MenuProps) => {
-  const popoverClass = classNames("relative", extraClass)
-
+const Menu = () => {
   return (
-    <Popover className={popoverClass}>
+    <Popover className="relative">
       <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6">
         <span>Menu</span>
         <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />

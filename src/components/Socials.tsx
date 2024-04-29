@@ -2,7 +2,7 @@ import RedirectButton from "@/components/RedirectButton";
 
 const Socials = () => {
   return (
-    <div className="flex flex-row gap-6">
+    <>
       <RedirectButton
         href="https://www.linkedin.com/in/ryanliu6/"
         title="View my LinkedIn Profile"
@@ -30,7 +30,7 @@ const Socials = () => {
       >
         <img height="32" width="32" alt="File Icon" src="https://cdn.simpleicons.org/libreofficewriter/gray" />
       </RedirectButton>
-    </div>
+    </>
   )
 }
 

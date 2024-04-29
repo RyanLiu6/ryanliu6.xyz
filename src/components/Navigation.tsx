@@ -1,23 +1,10 @@
-import classNames from "classnames";
+import { linkClass, navList } from "@/components/utils";
 
-import { navList } from "@/components/utils";
-
-interface NavigationProps {
-  extraClass?: string,
-}
-
-const Navigation = ({ extraClass }: NavigationProps) => {
-  const linkClassName = classNames("font-medium", "transition", "hover:text-cyan-500")
-
-  let navClass = classNames("flex", "flex-wrap", "justify-center", "gap-6")
-  if (extraClass) {
-    navClass = classNames(navClass, extraClass)
-  }
-
+const Navigation = () => {
   return (
-    <nav className={navClass}>
+    <nav className="flex flex-row flex-wrap gap-6">
       {navList.map((item) => (
-        <a className={linkClassName} key={item.name} href={item.href}>{item.name}</a>
+        <a className={linkClass} key={item.name} href={item.href}>{item.name}</a>
       ))}
     </nav>
   )

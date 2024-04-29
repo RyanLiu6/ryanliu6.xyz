@@ -25,19 +25,17 @@ const ThemeIcon = () => {
   }, [darkMode]);
 
   return (
-    <div className={buttonClass}>
-      <button onClick={toggleTheme}>
-        {darkMode ? (
-          <>
-            <SunIcon className="h-6 w-6" />
-          </>
-          ) : (
-          <>
-            <MoonIcon className="h-6 w-6" />
-          </>
-        )}
-      </button>
-    </div>
+    <button onClick={toggleTheme} className={buttonClass}>
+      {darkMode ? (
+        <>
+          <SunIcon className="h-6 w-6" />
+        </>
+        ) : (
+        <>
+          <MoonIcon className="h-6 w-6" />
+        </>
+      )}
+    </button>
   )
 }
 
