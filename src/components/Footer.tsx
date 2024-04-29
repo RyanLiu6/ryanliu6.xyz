@@ -8,17 +8,15 @@ const Footer = () => {
   const footerClass = classNames(marginalBorder, "flex flex-col items-center justify-center")
 
   return (
-    <footer>
-      <div className={footerClass}>
-        <div>
-          <Socials />
-        </div>
-        <div>
-          <p className="text-sm">
-            &copy; {currYear} Ryan Liu.
-          </p>
-        </div>
-      </div>
+    <footer className={footerClass}>
+      <section className="flex flex-row gap-6">
+        <Socials />
+      </section>
+      <section>
+        <p className="text-sm">
+          &copy; {currYear} Ryan Liu.
+        </p>
+      </section>
     </footer>
   )
 }
