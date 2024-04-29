@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { buttonClass } from "@/components/utils";
+
 interface RedirectButtonProps {
   href: string,
   title: string,
@@ -11,10 +13,10 @@ const RedirectButton = ({ href, title, children }: RedirectButtonProps) => {
     <button>
       <a
         href={href}
-        rel="_noopener"
+        rel="_noopener noreferrer"
         target="_blank"
         title={title}
-        className="flex rounded-lg p-2 transition hover:bg-fuchsia-200/20 hover:dark:bg-zinc-700 hover:shadow-lg"
+        className={buttonClass}
       >
         {children}
       </a>

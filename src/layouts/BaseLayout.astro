@@ -7,7 +7,7 @@ import { ViewTransitions } from 'astro:transitions';
 
 import Header from "@/components/Header.tsx";
 import Footer from "@/components/Footer.tsx";
-import { mainBorder, bodyBorder } from "@/components/utils";
+import { bodyBorder, mainBorder } from "@/components/utils";
 
 const { pageName } = Astro.props;
 const nameWithName: string = pageName.trim() + " - Ryan Liu";
@@ -21,10 +21,12 @@ const nameWithName: string = pageName.trim() + " - Ryan Liu";
 		<ViewTransitions />
 		<title>{nameWithName}</title>
 	</head>
-	<body class={mainBorder}>
+	<body class={bodyBorder}>
 		<Header client:load />
-		<main class={bodyBorder}>
-			<slot />
+		<main class={mainBorder}>
+			<div class="flex flex-col flex-1 max-w-screen-lg w-full">
+				<slot />
+			</div>
 		</main>
 		<Footer />
 	</body>

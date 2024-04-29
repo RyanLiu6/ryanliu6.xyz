@@ -18,9 +18,7 @@ const Header = () => {
           <Navigation extraClass={navClass} />
           <Menu extraClass={menuClass} />
         </div>
-        <div className="flex rounded-lg p-2 transition hover:bg-fuchsia-200/20 hover:dark:bg-zinc-700 hover:shadow-lg">
-          <ThemeIcon />
-        </div>
+        <ThemeIcon />
       </div>
     </div>
     </header>
