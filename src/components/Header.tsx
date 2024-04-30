@@ -1,9 +1,9 @@
 import classNames from "classnames";
 
-import Menu from "@/components/Menu";
+import Menu from "@/components/common/Menu";
 import Navigation from "@/components/Navigation";
 import ThemeIcon from "@/components/ThemeIcon";
-import { marginalBorder, shadowBorder } from "@/components/utils";
+import { marginalBorder, navList, shadowBorder } from "@/components/common/utils";
 
 const Header = () => {
   const headerClass = classNames(marginalBorder, "flex flex-row w-full relative justify-between")
@@ -17,7 +17,16 @@ const Header = () => {
           <Navigation />
         </div>
         <div className={menuClass}>
-          <Menu />
+          <Menu>
+            {navList.map((item) => (
+              <div key={item.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-fuchsia-200/20 hover:dark:bg-zinc-700">
+                <a href={item.href} className="font-semibold">
+                  {item.name}
+                  <span className="absolute inset-0" />
+                </a>
+              </div>
+            ))}
+          </Menu>
         </div>
       </section>
       <section>

@@ -2,7 +2,7 @@ import classNames from "classnames";
 
 export const navList = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "Work", href: "/work" },
   { name: "Projects", href: "/projects" },
   { name: "Plamo", href: "/plamo" },
 ]
@@ -23,4 +23,4 @@ export const bodyBorder = classNames(flexClass, textClass, backgroundClass, "min
 
 export const mainBorder = classNames(flexClass, "items-center px-6 lg:px-8")
 
-export const marginalBorder = classNames(textClass, "relative mx-auto max-w-screen-lg px-6 py-6");
+export const marginalBorder = classNames(textClass, "relative mx-auto max-w-screen-md px-6 py-6");

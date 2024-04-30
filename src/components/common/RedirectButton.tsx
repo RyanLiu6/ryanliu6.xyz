@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { buttonClass } from "@/components/utils";
+import { buttonClass } from "@/components/common/utils";
 
 interface RedirectButtonProps {
   href: string,

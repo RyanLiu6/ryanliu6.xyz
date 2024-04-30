@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const pageName: string = "Work"
+const work = await getCollection('work');
+---
+<BaseLayout pageName={pageName}>
+  <section class="flex flex-col justify-center">
+    {
+      work
+        .sort((a, b) => a.data?.lastDate.getTime() - b.data?.lastDate.getTime())
+        .map((work) => (
+          <article class="flex flex-col py-4">
+            <h1 class="text-xl font-bold underline underline-offset-auto">
+              <a
+                href={work.data.link}
+                rel="_noopener noreferrer"
+                target="_blank"
+              >
+                {work.data.employer}
+              </a>
+            </h1>
+            <p class="text-slate-500 dark:text-slate-400 text-sm">{work.data.position}, {work.data.dates}</p>
+            <p>{work.data.description}</p>
+            <div class="py-2">
+              <ul class="list-disc list-inside pl-4">
+                {work.body.trim().split("\n")
+                  .map((line) => (
+                    <li set:html={line.replace("*", "")}/>
+                  ))
+                }
+              </ul>
+            </div>
+          </article>
+        )
+      )
+    }
+  </section>
+</BaseLayout>
