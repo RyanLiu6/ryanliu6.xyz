@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 
-import { buttonClass } from "@/components/utils";
+import { buttonClass } from "@/components/common/utils";
 
 export enum Themes {
   theme = "theme",
