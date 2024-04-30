@@ -4,10 +4,19 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 const pageName: string = "Home Page"
 ---
 <BaseLayout pageName={pageName}>
-  <section>
-    <h1>
+  <section class="flex flex-col justify-center">
+    <h1 class="font-bold text-3xl py-4">
       Hey there! I'm Ryan 👋
     </h1>
-    <p>I'm a Software Engineer based in Vancouver</p>
+    <div class="flex flex-col gap-6">
+      <p>
+        I'm a Software Engineer based in Vancouver.
+      </p>
+
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        PS: This website is constantly being worked on, so some things may not work as expected!
+        I'm still learning lots about Web Dev and Frameworks like AstroJS, React, and Tailwind.
+      </p>
+    </div>
   </section>
 </BaseLayout>

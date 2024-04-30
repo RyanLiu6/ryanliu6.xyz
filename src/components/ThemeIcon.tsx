@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 
 import { buttonClass } from "@/components/common/utils";
@@ -10,17 +10,24 @@ export enum Themes {
 }
 
 const ThemeIcon = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(true);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    const storedTheme = localStorage.getItem(Themes.theme) || Themes.dark
+    setDarkMode(storedTheme == Themes.dark);
+  }, []);
+
+  useLayoutEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
+      localStorage.setItem(Themes.theme, Themes.dark);
     } else {
       document.documentElement.classList.remove('dark');
+      localStorage.setItem(Themes.theme, Themes.light);
     }
   }, [darkMode]);
 

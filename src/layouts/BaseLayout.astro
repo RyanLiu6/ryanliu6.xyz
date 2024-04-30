@@ -22,7 +22,8 @@ const nameWithName: string = pageName.trim() + " - Ryan Liu";
 		<title>{nameWithName}</title>
 	</head>
 	<body class={bodyBorder}>
-		<Header client:load />
+		<Header client:only="react"/>
+		<!-- <Header client:load/> -->
 		<main class={mainBorder}>
 			<div class="flex flex-col flex-1 max-w-screen-sm w-full">
 				<slot />
