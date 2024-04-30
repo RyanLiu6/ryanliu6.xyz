@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const pageName: string = "Work"
-const work = await getCollection('work');
+const work = await getCollection("work");
 ---
 <BaseLayout pageName={pageName}>
   <section class="flex flex-col justify-center">
