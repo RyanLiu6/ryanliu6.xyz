@@ -7,7 +7,7 @@ export const navList = [
   { name: "Plamo", href: "/plamo" },
 ]
 
-export const textClass = classNames("text-slate-600 dark:text-slate-200")
+export const textClass = classNames("font-roboto text-slate-600 dark:text-zinc-300")
 
 export const backgroundClass = classNames("bg-violet-50/50 dark:bg-slate-900")
 

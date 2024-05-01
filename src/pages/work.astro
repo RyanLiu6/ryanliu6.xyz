@@ -8,6 +8,12 @@ const work = await getCollection("work");
 ---
 <BaseLayout pageName={pageName}>
   <section class="flex flex-col justify-center">
+    <div>
+      <h1 class="text-xl font-bold">Current Status</h1>
+      <p class="pb-4">I'm currently looking for a Software Engineer Position!</p>
+      <hr class="dark:border-zinc-600" />
+    </div>
+
     {
       work
         .sort((a, b) => a.data?.lastDate.getTime() - b.data?.lastDate.getTime())
