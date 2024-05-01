@@ -4,18 +4,27 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 const pageName: string = "Home Page"
 ---
 <BaseLayout pageName={pageName}>
-  <section class="flex flex-col justify-center">
+  <section class="flex flex-col flex-1 justify-center">
     <h1 class="font-bold text-3xl py-4">
       Hey there! I'm Ryan 👋
     </h1>
     <div class="flex flex-col gap-6">
       <p>
-        I'm a Software Engineer based in Vancouver.
+        I'm a Software Engineer based in Vancouver, Canada, and I'm passionate about Software, Games, Plamo, and all things in between.
+        Currently attempting on something cool with
+          <a
+            class="font-bold underline underline-offset-2"
+            href="https://foundryvtt.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >Foundry</a>
+          in my spare time.
       </p>
 
       <p class="text-sm text-slate-500 dark:text-slate-400">
         PS: This website is constantly being worked on, so some things may not work as expected!
         I'm still learning lots about Web Dev and Frameworks like AstroJS, React, and Tailwind.
+        If you notice anything that can be fixed, don't hesitate to open up an issue on Github!
       </p>
     </div>
   </section>

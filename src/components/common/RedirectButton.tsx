@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { buttonClass } from "@/components/common/utils";
+import BorderedButton from "@/components/common/BorderedButton";
 
 interface RedirectButtonProps {
   href: string,
@@ -10,17 +10,16 @@ interface RedirectButtonProps {
 
 const RedirectButton = ({ href, title, children }: RedirectButtonProps) => {
   return (
-    <button>
+    <BorderedButton>
       <a
         href={href}
-        rel="_noopener noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
         title={title}
-        className={buttonClass}
       >
         {children}
       </a>
-    </button>
+    </BorderedButton>
   )
 }
 

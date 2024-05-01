@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { useState, useEffect } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
@@ -11,6 +12,9 @@ export enum Themes {
 
 const ThemeIcon = () => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
+
+  const darkIconClass = classNames("h-6 w-6", darkMode ? "flex" : "hidden");
+  const lightIconClass = classNames("h-6 w-6", darkMode ? "hidden" : "flex");
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
@@ -33,8 +37,8 @@ const ThemeIcon = () => {
 
   return (
     <button onClick={toggleTheme} className={buttonClass}>
-      <SunIcon id="themeLightIcon" className={`h-6 w-6 ${darkMode ? "hidden" : "flex"}`} />
-      <MoonIcon id="themeDarkIcon" className={`h-6 w-6 ${darkMode ? "flex" : "hidden"}`} />
+      <SunIcon id="themeLightIcon" className={darkIconClass} />
+      <MoonIcon id="themeDarkIcon" className={lightIconClass} />
     </button>
   )
 }
