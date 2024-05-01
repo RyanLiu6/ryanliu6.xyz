@@ -13,7 +13,7 @@ export const backgroundClass = classNames("bg-violet-50/50 dark:bg-slate-900")
 
 export const buttonClass = classNames("flex rounded-lg p-2 transition hover:bg-rose-300/30 hover:dark:bg-zinc-700 hover:shadow-lg")
 
-export const linkClass = classNames("font-medium", "transition", "hover:text-cyan-500")
+export const linkClass = classNames("font-bold", "transition", "hover:text-cyan-500")
 
 export const flexClass = classNames("flex flex-col flex-1")
 
