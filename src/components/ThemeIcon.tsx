@@ -1,5 +1,5 @@
-import { useState, useLayoutEffect } from "react";
-import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
+import { useState, useEffect } from "react";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
 import { buttonClass } from "@/components/common/utils";
 
@@ -16,12 +16,12 @@ const ThemeIcon = () => {
     setDarkMode(!darkMode);
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const storedTheme = localStorage.getItem(Themes.theme) || Themes.dark
     setDarkMode(storedTheme == Themes.dark);
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
       localStorage.setItem(Themes.theme, Themes.dark);
@@ -33,15 +33,8 @@ const ThemeIcon = () => {
 
   return (
     <button onClick={toggleTheme} className={buttonClass}>
-      {darkMode ? (
-        <>
-          <SunIcon className="h-6 w-6" />
-        </>
-        ) : (
-        <>
-          <MoonIcon className="h-6 w-6" />
-        </>
-      )}
+      <SunIcon id="themeLightIcon" className={`h-6 w-6 ${darkMode ? "hidden" : "flex"}`} />
+      <MoonIcon id="themeDarkIcon" className={`h-6 w-6 ${darkMode ? "flex" : "hidden"}`} />
     </button>
   )
 }
