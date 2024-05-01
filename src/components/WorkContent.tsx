@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import type { CollectionEntry } from "astro:content";
 
 interface WorkProps {
@@ -6,7 +5,6 @@ interface WorkProps {
 }
 
 const WorkContent = ({ work }: WorkProps) => {
-
   return (
     <section>
       <article className="flex flex-col py-4">
@@ -27,8 +25,8 @@ const WorkContent = ({ work }: WorkProps) => {
         <div className="py-2">
           <ul className="list-disc list-inside pl-4">
             {work.body.trim().split("\n")
-              .map((line) => (
-                <li>{line.replace("*", "")}</li>
+              .map((line, index) => (
+                <li key={index}>{line.replace("*", "")}</li>
               ))
             }
           </ul>

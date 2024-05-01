@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 
+import TextLink from "@/components/common/TextLink";
 import BorderedButton from "@/components/common/BorderedButton";
 
 interface RedirectButtonProps {
@@ -11,14 +12,12 @@ interface RedirectButtonProps {
 const RedirectButton = ({ href, title, children }: RedirectButtonProps) => {
   return (
     <BorderedButton>
-      <a
+      <TextLink
         href={href}
-        rel="noopener noreferrer"
-        target="_blank"
         title={title}
       >
         {children}
-      </a>
+      </TextLink>
     </BorderedButton>
   )
 }
