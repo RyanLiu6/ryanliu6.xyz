@@ -1,4 +1,5 @@
 ---
+import TextLink from "@/components/common/TextLink";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const pageName: string = "Home Page"
@@ -11,14 +12,7 @@ const pageName: string = "Home Page"
     <div class="flex flex-col gap-6">
       <p>
         I'm a Software Engineer based in Vancouver, Canada, and I'm passionate about Software, Games, Plamo, and all things in between.
-        Currently attempting on something cool with
-          <a
-            class="font-bold underline underline-offset-2"
-            href="https://foundryvtt.com/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >Foundry</a>
-          in my spare time.
+        Currently attempting on something cool with <TextLink href="https://foundryvtt.com" title="FoundryVTT">Foundry</TextLink> in my spare time.
       </p>
 
       <p class="text-sm text-slate-500 dark:text-slate-400">
