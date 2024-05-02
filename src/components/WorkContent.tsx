@@ -1,4 +1,7 @@
+import Markdown from "react-markdown";
 import type { CollectionEntry } from "astro:content";
+
+import { mdClass } from "@/components/common/utils";
 
 interface WorkProps {
   work: CollectionEntry<"work"> | CollectionEntry<"internships">;
@@ -22,15 +25,7 @@ const WorkContent = ({ work }: WorkProps) => {
           <p>{work.data.dates}</p>
         </div>
         <p>{work.data.description}</p>
-        <div className="py-2">
-          <ul className="list-disc list-inside pl-4">
-            {work.body.trim().split("\n")
-              .map((line, index) => (
-                <li key={index}>{line.replace("*", "")}</li>
-              ))
-            }
-          </ul>
-        </div>
+        <Markdown className={mdClass}>{work.body}</Markdown>
       </article>
     </section>
   )
