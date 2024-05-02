@@ -28,8 +28,8 @@ const internships = await getCollection("internships");
     }
 
     <div class="flex justify-center pt-4">
-      <BorderedButton>
-        <p id="internButton">Show Internships</p>
+      <BorderedButton id="internButton">
+        <p id="internText">Show Internships</p>
       </BorderedButton>
     </div>
 
@@ -49,16 +49,17 @@ const internships = await getCollection("internships");
 
 <script>
   const internButton = document.getElementById("internButton");
-  internButton?.addEventListener("click", () => {
+  const internText = document.getElementById("internText");
+  internButton!.addEventListener("click", () => {
     const internSection = document.getElementById("internSection");
     // Logic is for previous state, so has to be backwards!
     if (internSection?.classList.contains("hidden")) {
-      internButton.innerHTML = "Hide Internships";
+      internText!.innerHTML = "Hide Internships";
       setTimeout(() => {
         internSection?.classList.replace("opacity-0", "opacity-100");
       }, 50);
     } else {
-      internButton.innerHTML = "Show Internships";
+      internText!.innerHTML = "Show Internships";
       setTimeout(() => {
         internSection?.classList.replace("opacity-100", "opacity-0");
       }, 50);
