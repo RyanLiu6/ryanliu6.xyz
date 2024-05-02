@@ -3,12 +3,13 @@ import type { ReactNode } from "react";
 import { buttonClass } from "@/components/common/utils";
 
 interface BorderedButtonProps {
+  id?: string
   children: ReactNode,
 }
 
-const BorderedButton = ({ children }: BorderedButtonProps) => {
+const BorderedButton = ({ id, children }: BorderedButtonProps) => {
   return (
-    <button className={buttonClass}>
+    <button id={id ? id : undefined} className={buttonClass}>
       {children}
     </button>
   )
