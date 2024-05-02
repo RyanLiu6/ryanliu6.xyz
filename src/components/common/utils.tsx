@@ -9,6 +9,8 @@ export const navList = [
 
 export const textClass = classNames("font-roboto text-slate-600 dark:text-zinc-300")
 
+export const mdClass = classNames(textClass, "prose dark:prose-invert");
+
 export const backgroundClass = classNames("bg-violet-50/50 dark:bg-slate-900")
 
 export const buttonClass = classNames("flex rounded-lg p-2 transition hover:bg-rose-300/30 hover:dark:bg-zinc-700 hover:shadow-lg")
