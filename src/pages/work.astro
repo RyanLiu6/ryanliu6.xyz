@@ -48,22 +48,28 @@ const internships = await getCollection("internships");
 </BaseLayout>
 
 <script>
-  const internButton = document.getElementById("internButton");
-  const internText = document.getElementById("internText");
-  internButton!.addEventListener("click", () => {
-    const internSection = document.getElementById("internSection");
-    // Logic is for previous state, so has to be backwards!
-    if (internSection?.classList.contains("hidden")) {
-      internText!.innerHTML = "Hide Internships";
-      setTimeout(() => {
-        internSection?.classList.replace("opacity-0", "opacity-100");
-      }, 50);
-    } else {
-      internText!.innerHTML = "Show Internships";
-      setTimeout(() => {
-        internSection?.classList.replace("opacity-100", "opacity-0");
-      }, 50);
+  // astro:page-load with ViewTransitions runs this on every page, have to be specific!
+  document.addEventListener("astro:page-load", () => {
+    const internButton = document.getElementById("internButton");
+    const internText = document.getElementById("internText");
+
+    if (internButton) {
+      internButton.addEventListener("click", () => {
+        const internSection = document.getElementById("internSection");
+        // Logic is for previous state, so has to be backwards!
+        if (internSection?.classList.contains("hidden")) {
+          internText!.innerHTML = "Hide Internships";
+          setTimeout(() => {
+            internSection?.classList.replace("opacity-0", "opacity-100");
+          }, 50);
+        } else {
+          internText!.innerHTML = "Show Internships";
+          setTimeout(() => {
+            internSection?.classList.replace("opacity-100", "opacity-0");
+          }, 50);
+        }
+        internSection?.classList.toggle("hidden");
+      })
     }
-    internSection?.classList.toggle("hidden");
-  })
+  });
 </script>
