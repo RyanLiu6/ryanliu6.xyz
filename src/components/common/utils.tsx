@@ -9,7 +9,7 @@ export const navList = [
 
 export const textClass = classNames("font-roboto text-slate-600 dark:text-zinc-300")
 
-export const mdClass = classNames(textClass, "prose dark:prose-invert");
+export const mdClass = classNames(textClass, "prose dark:prose-invert max-w-none");
 
 export const backgroundClass = classNames("bg-violet-50/50 dark:bg-slate-900")
 
