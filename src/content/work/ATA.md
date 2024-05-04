@@ -9,7 +9,7 @@ link: "https://www.athinkingape.com/"
 #### Platform
 * Led the creation of internal platform tools and infrastructure to migrate local environment from Virtual Machines to Docker containers
 * Spearheaded company-wide initiative to switch to Apple Silicon based Macbooks by rewriting Docker images, platform tools, and key documentation, including those for onboarding
-* Worked with senior engineers and leadership to migrate existing Production microservices to Docker using HashiCorp Nomad
+* Worked with senior engineers and leadership to migrate existing Production microservices to Docker using Nomad
 * Sped up data validator by ?x via parallelization, which drastically lowered data errors
 * Reduced risk of Production deployments by leveraging Nomad to create Canary containers
 
@@ -19,5 +19,5 @@ link: "https://www.athinkingape.com/"
 
 #### Full Stack and Apps
 * Proactively identified pain point in user experience with local Docker environments and created a modern MacOS app using SwiftUI to provide a GUI to non-technical users
-* Rewrote aging internal Login and Authentication pages with React and Tailwind, now properly supporting 2FA with sanitized and controlled redirects
+* Rewrote ageing internal Login and Authentication pages with React and Tailwind, now properly supporting 2FA with sanitized and controlled redirects
 * Responsible for maintaining 1MM+ revenue legacy game, include upgrades to required SDKs and releasing content
