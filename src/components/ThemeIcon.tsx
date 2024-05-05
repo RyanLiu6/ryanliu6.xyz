@@ -13,8 +13,8 @@ export enum Themes {
 const ThemeIcon = () => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
 
-  const darkIconClass = classNames("h-6 w-6", darkMode ? "flex" : "hidden");
-  const lightIconClass = classNames("h-6 w-6", darkMode ? "hidden" : "flex");
+  const darkIconClass = classNames("h-6 w-6 flex dark:hidden");
+  const lightIconClass = classNames("h-6 w-6 hidden dark:flex");
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
