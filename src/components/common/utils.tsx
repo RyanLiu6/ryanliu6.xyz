@@ -19,7 +19,7 @@ export const linkClass = classNames("font-bold", "transition", "hover:text-cyan-
 
 export const flexClass = classNames("flex flex-col flex-1")
 
-export const shadowBorder = classNames("rounded-full px-6 py-2 shadow-lg bg-rose-300/30 dark:bg-fuschia-700");
+export const shadowBorder = classNames("rounded-2xl px-6 py-2 shadow-lg bg-rose-300/30 dark:bg-fuschia-700");
 
 export const bodyBorder = classNames(flexClass, textClass, backgroundClass, "min-h-screen")
 

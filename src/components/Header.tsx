@@ -2,7 +2,6 @@ import classNames from "classnames";
 
 import ThemeIcon from "@/components/ThemeIcon";
 import Navigation from "@/components/Navigation";
-// import CurrentSong from "@/components/CurrentSong";
 import IconedPopover from "@/components/common/Popover";
 import { marginalBorder, navList, shadowBorder } from "@/components/common/utils";
 
@@ -31,7 +30,6 @@ const Header = () => {
         </div>
       </section>
       <section className="flex flex-row">
-        {/* <CurrentSong /> */}
         <ThemeIcon />
       </section>
     </header>
