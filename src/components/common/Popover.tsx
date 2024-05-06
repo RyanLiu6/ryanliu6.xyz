@@ -47,7 +47,7 @@ const IconedPopover = ({ text, icon, children }: PopoverProps) => {
         leaveTo="opacity-0 translate-y-1"
       >
         <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-48 max-w-max -translate-x-1/2 px-4">
-          <div className={ "w-48 max-w-md flex-auto overflow-hidden rounded-3xl text-sm leading-6 shadow-lg ring-1 bg-violet-50 dark:bg-slate-900"}>
+          <div className={ "w-48 max-w-md flex-auto overflow-hidden rounded-lg text-sm leading-6 shadow-lg ring-1 bg-violet-50 dark:bg-slate-900"}>
             <div className="p-4">
               {children}
             </div>
