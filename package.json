@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
+    "@astrojs/cloudflare": "^10.2.5",
     "@astrojs/react": "^3.3.1",
     "@astrojs/tailwind": "^5.1.0",
     "@headlessui/react": "^1.7.19",
@@ -20,6 +21,7 @@
     "@types/react-dom": "^18.2.25",
     "astro": "^4.6.1",
     "classnames": "^2.5.1",
+    "dotenv": "^16.4.5",
     "npm": "^10.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
