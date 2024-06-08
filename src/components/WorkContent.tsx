@@ -24,7 +24,7 @@ const WorkContent = ({ work }: WorkProps) => {
           <p>{work.data.position}</p>
           <p>{work.data.dates}</p>
         </div>
-        <p>{work.data.description}</p>
+        <p className="text-sm">{work.data.description}</p>
         <Markdown className={mdClass}>{work.body}</Markdown>
       </article>
     </section>

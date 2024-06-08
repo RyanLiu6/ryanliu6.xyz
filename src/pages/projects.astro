@@ -1,10 +1,21 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import ProjectContent from "@/components/ProjectContent";
 
 const pageName: string = "Projects"
+const projects = await getCollection("projects");
 ---
 <BaseLayout pageName={pageName}>
-  <section class="flex flex-col items-center justify-center">
-    <h1 class="font-bold text-lg">Work In Progress ...</h1>
+  <section class="flex flex-col justify-center">
+    {
+      projects
+        .sort((a, b) => a.data?.order - b.data?.order)
+        .map((project) => (
+          <ProjectContent project={project} />
+          <hr class="dark:border-zinc-600" />
+        ))
+    }
   </section>
 </BaseLayout>
