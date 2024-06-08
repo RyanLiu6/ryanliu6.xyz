@@ -1,8 +1,6 @@
 import { z, defineCollection } from "astro:content";
 
 const baseSchema = z.object({
-    dates: z.string(),
-    lastDate: z.date(),
     description: z.string(),
     link: z.string(),
 })
@@ -10,10 +8,13 @@ const baseSchema = z.object({
 const workSchema = baseSchema.extend({
   employer: z.string(),
   position: z.string(),
+  dates: z.string(),
+  lastDate: z.date(),
 })
 
 const projectSchema = baseSchema.extend({
   name: z.string(),
+  order: z.number(),
 })
 
 const workCollection = defineCollection({
@@ -28,6 +29,6 @@ const projectCollection = defineCollection({
 
 export const collections = {
   work: workCollection,
-  project: projectCollection,
+  projects: projectCollection,
   internships: workCollection,
 };
