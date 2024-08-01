@@ -31,8 +31,8 @@ const Socials = () => {
         href="/Resume.pdf"
         title="View my Resume"
       >
-        <img height="24" width="24" alt="File Icon" src="https://cdn.simpleicons.org/libreofficewriter/475569" className="flex dark:hidden" />
-        <img height="24" width="24" alt="File Icon" src="https://cdn.simpleicons.org/libreofficewriter/d4d4d8" className="hidden dark:flex" />
+        <img height="24" width="24" alt="File Icon" src="https://cdn.simpleicons.org/googledocs/475569" className="flex dark:hidden" />
+        <img height="24" width="24" alt="File Icon" src="https://cdn.simpleicons.org/googledocs/d4d4d8" className="hidden dark:flex" />
       </RedirectButton>
     </>
   )
