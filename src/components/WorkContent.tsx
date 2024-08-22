@@ -1,7 +1,8 @@
+import classNames from "classnames";
 import Markdown from "react-markdown";
 import type { CollectionEntry } from "astro:content";
 
-import { mdClass } from "@/components/common/utils";
+import { mdClass, textClass } from "@/components/common/utils";
 
 interface WorkProps {
   work: CollectionEntry<"work"> | CollectionEntry<"internships">;
@@ -20,12 +21,27 @@ const WorkContent = ({ work }: WorkProps) => {
             {work.data.employer}
           </a>
         </h1>
-        <div className="flex flex-row justify-between text-slate-500 dark:text-slate-400 text-sm">
-          <p>{work.data.position}</p>
-          <p>{work.data.dates}</p>
-        </div>
-        <p className="text-sm">{work.data.description}</p>
-        <Markdown className={mdClass}>{work.body}</Markdown>
+        <p className="text-sm text-slate-500 dark:text-slate-400">{work.data.description}</p>
+        <Markdown
+          className={mdClass}
+          components={{
+            h4(props) {
+              const {children, node, ...rest} = props
+              const content = children as string;
+              const [position, time] = content.split("::");
+              const h4Class = classNames(textClass, "flex flex-row justify-between m-0")
+
+              return (
+                <h4 {...rest} className={h4Class}>
+                  <p className="font-bold m-0">{position.trim()}</p>
+                  <p className="italic m-0">{time.trim()}</p>
+                </h4>
+              )
+            }
+          }}
+        >
+          {work.body}
+        </Markdown>
       </article>
     </section>
   )

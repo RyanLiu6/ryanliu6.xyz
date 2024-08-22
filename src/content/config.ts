@@ -7,8 +7,6 @@ const baseSchema = z.object({
 
 const workSchema = baseSchema.extend({
   employer: z.string(),
-  position: z.string(),
-  dates: z.string(),
   lastDate: z.date(),
 })
 
