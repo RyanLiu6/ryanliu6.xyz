@@ -11,15 +11,9 @@ const internships = await getCollection("internships");
 ---
 <BaseLayout pageName={pageName}>
   <section class="flex flex-col justify-center">
-    <div class="text-center">
-      <h1 class="text-xl font-bold">Current Status</h1>
-      <p>I'm currently looking for a Software Engineer Position!</p>
-      <hr class="dark:border-zinc-600 mt-6 mb-2" />
-    </div>
-
     {
       work
-        .sort((a, b) => a.data?.lastDate.getTime() - b.data?.lastDate.getTime())
+        .sort((a, b) => (b.data?.lastDate?.getTime() ?? Infinity) - (a.data?.lastDate?.getTime() ?? Infinity))
         .map((work) => (
           <WorkContent work={work} />
           <hr class="dark:border-zinc-600" />
@@ -36,7 +30,7 @@ const internships = await getCollection("internships");
     <section id="internSection" class="hidden opacity-0 transition-opacity duration-500 ease-in-out">
       {
         internships
-          .sort((a, b) => b.data?.lastDate.getTime() - a.data?.lastDate.getTime() )
+          .sort((a, b) => (b.data?.lastDate?.getTime() ?? Infinity) - (a.data?.lastDate?.getTime() ?? Infinity))
           .map((internships) => (
             <WorkContent work={internships} />
             <hr class="dark:border-zinc-600" />

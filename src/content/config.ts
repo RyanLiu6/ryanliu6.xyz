@@ -7,7 +7,7 @@ const baseSchema = z.object({
 
 const workSchema = baseSchema.extend({
   employer: z.string(),
-  lastDate: z.date(),
+  lastDate: z.date().nullable(),
 })
 
 const projectSchema = baseSchema.extend({
