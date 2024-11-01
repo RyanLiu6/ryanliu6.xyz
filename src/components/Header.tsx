@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import ThemeIcon from "@/components/ThemeIcon";
+import ThemeIcon from "@/components/common/ThemeIcon";
 import Navigation from "@/components/Navigation";
 import IconedPopover from "@/components/common/Popover";
 import { marginalBorder, navList, shadowBorder } from "@/components/common/utils";
