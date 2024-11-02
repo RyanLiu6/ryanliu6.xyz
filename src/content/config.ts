@@ -1,8 +1,8 @@
 import { z, defineCollection } from "astro:content";
 
 const baseSchema = z.object({
-    description: z.string(),
-    link: z.string(),
+  description: z.string(),
+  link: z.string(),
 })
 
 const workSchema = baseSchema.extend({
@@ -13,6 +13,7 @@ const workSchema = baseSchema.extend({
 const projectSchema = baseSchema.extend({
   name: z.string(),
   order: z.number(),
+  languages: z.array(z.string())
 })
 
 const workCollection = defineCollection({

@@ -3,5 +3,6 @@ name: "Vigor"
 description: "Python library to store reusable functions and scripts for personal usage."
 link: "https://github.com/RyanLiu6/vigor/"
 order: 3
+languages: ["Python", "Shell"]
 ---
-* Designed a small custom Python CLI library to manage Docker Compose files and environments, leveraging Compose’s built-in config validation to generate custom compose files
+Collection of semi-random useful functions and scripts, packed into a Python library for ease-of-use. Primarily serves as a manager of Docker Compose files and environments.
