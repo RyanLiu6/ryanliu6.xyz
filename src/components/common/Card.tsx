@@ -1,6 +1,7 @@
 import classNames from "classnames";
 
-import { textClass, hoverColour, languageColours } from "@/components/common/utils";
+import { languageColours } from "@/components/utils";
+import { textClass, hoverColour } from "@/components/common/utils";
 
 interface CardProps {
   title: string;

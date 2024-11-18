@@ -1,20 +1,5 @@
 import classNames from "classnames";
 
-export const navList = [
-  { name: "Home", href: "/" },
-  { name: "Work", href: "/work" },
-  { name: "Projects", href: "/projects" },
-  { name: "Plamo", href: "/plamo" },
-]
-
-export const languageColours: { [key: string]: string } = {
-  JavaScript: '#f7df1e',
-  TypeScript: '#007acc',
-  Python: '#3572a5',
-  Shell: '#89e051',
-  Astro: '#ff6f47',
-}
-
 export const textClass = classNames("font-roboto text-slate-600 dark:text-zinc-300")
 
 export const mdClass = classNames(textClass, "prose dark:prose-invert max-w-none");

@@ -1,4 +1,5 @@
-import { linkClass, navList } from "@/components/common/utils";
+import { navList } from "@/components/utils";
+import { linkClass } from "@/components/common/utils";
 
 const Navigation = () => {
   return (

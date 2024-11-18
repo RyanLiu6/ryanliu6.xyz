@@ -1,9 +1,10 @@
 import classNames from "classnames";
 
-import ThemeIcon from "@/components/common/ThemeIcon";
+import { navList } from "@/components/utils";
 import Navigation from "@/components/Navigation";
+import ThemeIcon from "@/components/common/ThemeIcon";
 import IconedPopover from "@/components/common/Popover";
-import { marginalBorder, navList, shadowBorder } from "@/components/common/utils";
+import { marginalBorder, shadowBorder } from "@/components/common/utils";
 
 const Header = () => {
   const headerClass = classNames(marginalBorder, "flex flex-row w-full relative justify-between")
