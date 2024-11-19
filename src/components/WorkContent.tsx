@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Markdown from "react-markdown";
 import type { CollectionEntry } from "astro:content";
 
-import { mdStyle, textStyle } from "@ryanliu6/xi";
+import { mdStyle, textStyle } from "@ryanliu6/xi/styles";
 
 interface WorkProps {
   work: CollectionEntry<"work"> | CollectionEntry<"internships">;

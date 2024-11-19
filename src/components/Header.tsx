@@ -1,7 +1,7 @@
 import classNames from "classnames";
 
 import { ThemeIcon, IconedPopover } from "@ryanliu6/xi";
-import { linkStyle, marginalBorder, shadowBorder } from "@ryanliu6/xi"
+import { linkStyle, marginalBorder, shadowBorder } from "@ryanliu6/xi/styles";
 
 const navList = [
   { name: "Home", href: "/" },
