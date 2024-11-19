@@ -1,7 +1,5 @@
-interface Tag {
-  name: string;
-  color?: string;
-}
+import type { Tag } from "@/components/common/Card";
+
 
 // GitHub language colors from https://github.com/ozh/github-colors/blob/master/colors.json
 export const languageColours: { [key: string]: string } = {

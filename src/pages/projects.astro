@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Card from "@/components/common/Card";
-import { createLanguageTags } from "@/components/tags";
+import { createLanguageTags } from "@/components/common/tags";
 
 const pageName: string = "Projects"
 const projects = await getCollection("projects");

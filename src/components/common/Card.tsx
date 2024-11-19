@@ -2,7 +2,7 @@ import classNames from "classnames";
 
 import { textClass, hoverColour } from "@/components/common/utils";
 
-interface Tag {
+export interface Tag {
   name: string;
   colour?: string;
 }
