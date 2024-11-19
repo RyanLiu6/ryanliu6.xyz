@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Card from "@/components/common/Card";
+import { createLanguageTags } from "@/components/tags";
 
 const pageName: string = "Projects"
 const projects = await getCollection("projects");
@@ -13,19 +14,12 @@ const projects = await getCollection("projects");
       projects
         .sort((a, b) => a.data?.order - b.data?.order)
         .map((project) => (
-          <a
-            class="p-4"
-            href={project.data.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Card
-              title={project.data.name}
-              description={project.body}
-              link={project.data.link}
-              tags={project.data.languages}
-            />
-          </a>
+          <Card
+            title={project.data.name}
+            description={project.body}
+            link={project.data.link}
+            tags={createLanguageTags(project.data.languages)}
+          />
         ))
     }
   </section>

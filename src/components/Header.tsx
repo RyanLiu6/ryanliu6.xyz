@@ -1,10 +1,16 @@
 import classNames from "classnames";
 
-import { navList } from "@/components/utils";
-import Navigation from "@/components/Navigation";
 import ThemeIcon from "@/components/common/ThemeIcon";
+import { linkClass } from "@/components/common/utils";
 import IconedPopover from "@/components/common/Popover";
 import { marginalBorder, shadowBorder } from "@/components/common/utils";
+
+const navList = [
+  { name: "Home", href: "/" },
+  { name: "Work", href: "/work" },
+  { name: "Projects", href: "/projects" },
+  { name: "Plamo", href: "/plamo" },
+]
 
 const Header = () => {
   const headerClass = classNames(marginalBorder, "flex flex-row w-full relative justify-between")
@@ -14,9 +20,15 @@ const Header = () => {
   return (
     <header className={headerClass}>
       <section className="flex flex-1 justify-center">
+        {/* Regular Navigation */}
         <div className={navClass}>
-          <Navigation />
+          <nav className="flex flex-row flex-wrap gap-6">
+            {navList.map((item) => (
+              <a className={linkClass} key={item.name} href={item.href}>{item.name}</a>
+            ))}
+          </nav>
         </div>
+        {/* Mobile Navigation  */}
         <div className={menuClass}>
           <IconedPopover text="Menu">
             {navList.map((item) => (
