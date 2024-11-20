@@ -1,9 +1,7 @@
 import classNames from "classnames";
 
-import ThemeIcon from "@/components/common/ThemeIcon";
-import { linkClass } from "@/components/common/utils";
-import IconedPopover from "@/components/common/Popover";
-import { marginalBorder, shadowBorder } from "@/components/common/utils";
+import { ThemeIcon, IconedPopover } from "@ryanliu6/xi";
+import { linkStyle, marginalBorder, shadowBorder } from "@ryanliu6/xi/styles";
 
 const navList = [
   { name: "Home", href: "/" },
@@ -24,7 +22,7 @@ const Header = () => {
         <div className={navClass}>
           <nav className="flex flex-row flex-wrap gap-6">
             {navList.map((item) => (
-              <a className={linkClass} key={item.name} href={item.href}>{item.name}</a>
+              <a className={linkStyle} key={item.name} href={item.href}>{item.name}</a>
             ))}
           </nav>
         </div>

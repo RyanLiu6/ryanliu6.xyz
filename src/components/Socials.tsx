@@ -1,4 +1,5 @@
-import RedirectButton from "@/components/common/RedirectButton";
+import { RedirectButton } from "@ryanliu6/xi";
+
 
 const Socials = () => {
   return (

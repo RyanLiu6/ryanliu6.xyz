@@ -1,7 +1,7 @@
 import classNames from "classnames";
 
 import Socials from "@/components/Socials";
-import { marginalBorder } from "@/components/common/utils";
+import { marginalBorder } from "@ryanliu6/xi/styles";
 
 const Footer = () => {
   const currYear = new Date().getFullYear();
