@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import WorkContent from "@/components/WorkContent";
-import BorderedButton from "@/components/common/BorderedButton";
+import { BorderedButton } from "@ryanliu6/xi";
 
 const pageName: string = "Work"
 const work = await getCollection("work");
