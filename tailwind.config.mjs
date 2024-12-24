@@ -1,10 +1,7 @@
-/** @type {import('tailwindcss').Config} */
+import typography from "@tailwindcss/typography";
 
 export default {
-  content: [
-    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
-    "./node_modules/@ryanliu6/xi/dist/**/*.js",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/@ryanliu6/xi/dist/**/*.js"],
   theme: {
     extend: {
       fontFamily: {
@@ -12,6 +9,6 @@ export default {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [typography],
   darkMode: "selector",
 };

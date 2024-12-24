@@ -72,14 +72,7 @@ const astroConfig = {
 
 export default [
   {
-    ignores: [
-      "dist/**",
-      "node_modules/**",
-      ".astro/**",
-      "tailwind.config.mjs",
-      "astro.config.mjs",
-      "src/env.d.ts",
-    ],
+    ignores: ["dist/**", "node_modules/**", ".astro/**"],
   },
   js.configs.recommended,
   {
