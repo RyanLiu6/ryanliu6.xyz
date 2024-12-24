@@ -1,9 +1,9 @@
 ---
 interface Props {
-  pageName: string,
+  pageName: string;
 }
 
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter } from "astro:transitions";
 
 import Header from "@/components/Header.tsx";
 import Footer from "@/components/Footer.tsx";
@@ -12,36 +12,37 @@ import { bodyBorder, mainBorder } from "@ryanliu6/xi/styles";
 const { pageName } = Astro.props;
 const nameWithName: string = pageName.trim() + " - Ryan Liu";
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<ClientRouter />
-		<title>{nameWithName}</title>
-		<script is:inline>
-			const THEME_KEY = "theme";
-			const THEME_DARK = "dark";
 
-			if (typeof localStorage !== "undefined") {
-				const storedTheme = localStorage.getItem(THEME_KEY) || THEME_DARK
-				if (storedTheme == THEME_DARK) {
-					document.documentElement.classList.add(THEME_DARK);
-				} else {
-					document.documentElement.classList.remove(THEME_DARK);
-				}
-			}
-		</script>
-	</head>
-	<body class={bodyBorder}>
-		<Header client:load />
-		<main class={mainBorder}>
-			<div class="flex flex-col flex-1 max-w-screen-md w-full">
-				<slot />
-			</div>
-		</main>
-		<Footer />
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <ClientRouter />
+    <title>{nameWithName}</title>
+    <script is:inline>
+      const THEME_KEY = "theme";
+      const THEME_DARK = "dark";
+
+      if (typeof localStorage !== "undefined") {
+        const storedTheme = localStorage.getItem(THEME_KEY) || THEME_DARK;
+        if (storedTheme == THEME_DARK) {
+          document.documentElement.classList.add(THEME_DARK);
+        } else {
+          document.documentElement.classList.remove(THEME_DARK);
+        }
+      }
+    </script>
+  </head>
+  <body class={bodyBorder}>
+    <Header client:load />
+    <main class={mainBorder}>
+      <div class="flex flex-col flex-1 max-w-screen-md w-full">
+        <slot />
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>

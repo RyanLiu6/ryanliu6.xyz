@@ -5,10 +5,11 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import { Card, createLanguageTags } from "@ryanliu6/xi";
 
-const pageName: string = "Projects"
+const pageName: string = "Projects";
 const projects: CollectionEntry<"projects">[] = await getCollection("projects");
 ---
-<BaseLayout pageName={pageName}>
+
+<BaseLayout {pageName}>
   <section class="flex flex-col justify-center">
     {
       projects

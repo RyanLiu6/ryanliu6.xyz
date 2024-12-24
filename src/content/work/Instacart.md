@@ -5,5 +5,7 @@ description: "Instacart is a grocery delivery service that connects you with loc
 link: "https://www.instacart.com/"
 logo: "https://cdn.simpleicons.org/instacart"
 ---
+
 #### Software Engineer II - Platform :: 2024 - Present
+
 Curently a Software Engineer on the Platform team, responsible for service ownership and deployment.

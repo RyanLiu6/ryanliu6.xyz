@@ -2,8 +2,9 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ValentinesPage from "@/pages/valentines/_valentines";
 
-const pageName: string = "Valentines"
+const pageName: string = "Valentines";
 ---
-<BaseLayout pageName={pageName}>
-	<ValentinesPage client:load/>
+
+<BaseLayout {pageName}>
+  <ValentinesPage client:load />
 </BaseLayout>

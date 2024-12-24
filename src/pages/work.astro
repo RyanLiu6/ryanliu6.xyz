@@ -5,20 +5,25 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import WorkContent from "@/components/WorkContent";
 import { BorderedButton } from "@ryanliu6/xi";
 
-const pageName: string = "Work"
+const pageName: string = "Work";
 const work: CollectionEntry<"work">[] = await getCollection("work");
 const internships: CollectionEntry<"internships">[] = await getCollection("internships");
 ---
-<BaseLayout pageName={pageName}>
+
+<BaseLayout {pageName}>
   <section class="flex flex-col justify-center">
     {
       work
-        .sort((a, b) => (b.data?.lastDate?.getTime() ?? Infinity) - (a.data?.lastDate?.getTime() ?? Infinity))
-        .map((work) => (
-          <WorkContent work={work} />
-          <hr class="dark:border-zinc-600" />
+        .sort(
+          (a, b) =>
+            (b.data?.lastDate?.getTime() ?? Infinity) - (a.data?.lastDate?.getTime() ?? Infinity),
         )
-      )
+        .map((work) => (
+          <>
+            <WorkContent work={work} />
+            <hr class="dark:border-zinc-600" />
+          </>
+        ))
     }
 
     <div class="flex justify-center pt-4">
@@ -27,15 +32,22 @@ const internships: CollectionEntry<"internships">[] = await getCollection("inter
       </BorderedButton>
     </div>
 
-    <section id="internSection" class="hidden opacity-0 transition-opacity duration-500 ease-in-out">
+    <section
+      id="internSection"
+      class="hidden opacity-0 transition-opacity duration-500 ease-in-out"
+    >
       {
         internships
-          .sort((a, b) => (b.data?.lastDate?.getTime() ?? Infinity) - (a.data?.lastDate?.getTime() ?? Infinity))
-          .map((internships) => (
-            <WorkContent work={internships} />
-            <hr class="dark:border-zinc-600" />
+          .sort(
+            (a, b) =>
+              (b.data?.lastDate?.getTime() ?? Infinity) - (a.data?.lastDate?.getTime() ?? Infinity),
           )
-        )
+          .map((internships) => (
+            <>
+              <WorkContent work={internships} />
+              <hr class="dark:border-zinc-600" />
+            </>
+          ))
       }
     </section>
   </section>
@@ -63,7 +75,7 @@ const internships: CollectionEntry<"internships">[] = await getCollection("inter
           }, 50);
         }
         internSection?.classList.toggle("hidden");
-      })
+      });
     }
   });
 </script>

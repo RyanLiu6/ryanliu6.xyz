@@ -8,12 +8,12 @@ const navList = [
   { name: "Work", href: "/work" },
   { name: "Projects", href: "/projects" },
   { name: "Plamo", href: "/plamo" },
-]
+];
 
 const Header = () => {
-  const headerClass = classNames(marginalBorder, "flex flex-row w-full relative justify-between")
-  const navClass = classNames(shadowBorder, "hidden md:flex")
-  const menuClass = classNames(shadowBorder, "flex md:hidden")
+  const headerClass = classNames(marginalBorder, "flex flex-row w-full relative justify-between");
+  const navClass = classNames(shadowBorder, "hidden md:flex");
+  const menuClass = classNames(shadowBorder, "flex md:hidden");
 
   return (
     <header className={headerClass}>
@@ -22,7 +22,9 @@ const Header = () => {
         <div className={navClass}>
           <nav className="flex flex-row flex-wrap gap-6">
             {navList.map((item) => (
-              <a className={linkStyle} key={item.name} href={item.href}>{item.name}</a>
+              <a className={linkStyle} key={item.name} href={item.href}>
+                {item.name}
+              </a>
             ))}
           </nav>
         </div>
@@ -30,7 +32,10 @@ const Header = () => {
         <div className={menuClass}>
           <IconedPopover text="Menu">
             {navList.map((item) => (
-              <div key={item.name} className="justify-center group relative flex gap-x-6 rounded-lg p-4 hover:bg-fuchsia-200/20 hover:dark:bg-zinc-700">
+              <div
+                key={item.name}
+                className="justify-center group relative flex gap-x-6 rounded-lg p-4 hover:bg-fuchsia-200/20 hover:dark:bg-zinc-700"
+              >
                 <a href={item.href} className="font-semibold">
                   {item.name}
                   <span className="absolute inset-0" />
@@ -44,7 +49,7 @@ const Header = () => {
         <ThemeIcon />
       </section>
     </header>
-  )
-}
+  );
+};
 
 export default Header;

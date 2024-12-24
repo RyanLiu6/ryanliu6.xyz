@@ -3,30 +3,36 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import { TextLink } from "@ryanliu6/xi";
 
-const pageName: string = "Plastic Models Kits"
+const pageName: string = "Plastic Models Kits";
 ---
-<BaseLayout pageName={pageName}>
+
+<BaseLayout {pageName}>
   <section class="flex flex-col justify-center">
     <h1 class="text-xl font-bold">Plastic Model Kits</h1>
     <div class="flex flex-col gap-6">
       <p>
-        Plamo, the hobby of building miniature plastic model kits, is arguably my favourite hobby of all time.
-        Specifically, there's just something special about building miniature Robots that sparks the joy in me.
+        Plamo, the hobby of building miniature plastic model kits, is arguably my favourite hobby of
+        all time. Specifically, there's just something special about building miniature Robots that
+        sparks the joy in me.
       </p>
 
       <p>
-        Soon, you'll find below my collection that I've worked on in the past years, including fully custom
-        painted ones. I still consider myself a beginner as I've only gotten my first Airbrush this past year.
+        Soon, you'll find below my collection that I've worked on in the past years, including fully
+        custom painted ones. I still consider myself a beginner as I've only gotten my first
+        Airbrush this past year.
       </p>
 
       <p>
-        This page is mostly a WIP since I haven't had a chance to take photos and write down my thoughts of each
-        model kit.
+        This page is mostly a WIP since I haven't had a chance to take photos and write down my
+        thoughts of each model kit.
       </p>
 
       <p>
         My current goal is to produce a piece that'll place in the top 3 of
-        <TextLink href="https://bandai-hobby.net/GBWC/canada/index.html" title="Gunpla Builder's World Cup">GBWC (Gunpla Builder's World Cup)</TextLink>
+        <TextLink
+          href="https://bandai-hobby.net/GBWC/canada/index.html"
+          title="Gunpla Builder's World Cup">GBWC (Gunpla Builder's World Cup)</TextLink
+        >
         in the coming years!
       </p>
     </div>

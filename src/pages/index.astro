@@ -3,27 +3,30 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import { TextLink } from "@ryanliu6/xi";
 
-const pageName: string = "Home Page"
+const pageName: string = "Home Page";
 ---
-<BaseLayout pageName={pageName}>
+
+<BaseLayout {pageName}>
   <section class="flex flex-col flex-1 justify-center">
-    <h1 class="font-bold text-3xl py-4">
-      Hey there! I'm Ryan 👋
-    </h1>
+    <h1 class="font-bold text-3xl py-4">Hey there! I'm Ryan 👋</h1>
     <div class="flex flex-col gap-6">
       <p>
-        I'm a Software Engineer based in Vancouver, Canada, and I'm passionate about Software, Games, Plamo, and all things in between.
-        Currently attempting on something cool with <TextLink href="https://foundryvtt.com" title="FoundryVTT">Foundry</TextLink> in my spare time.
+        I'm a Software Engineer based in Vancouver, Canada, and I'm passionate about Software,
+        Games, Plamo, and all things in between. Currently attempting on something cool with <TextLink
+          href="https://foundryvtt.com"
+          title="FoundryVTT">Foundry</TextLink
+        > in my spare time.
       </p>
 
       <p class="text-sm text-slate-500 dark:text-slate-400">
-        PS: This website is constantly being worked on, so some things may not work as expected!
-        I'm still learning lots about modern Web Dev using frameworks like Astro, React, and Tailwind.
+        PS: This website is constantly being worked on, so some things may not work as expected! I'm
+        still learning lots about modern Web Dev using frameworks like Astro, React, and Tailwind.
         If you notice anything that can be fixed, don't hesitate to open up an issue on Github!
       </p>
 
       <p class="text-sm text-slate-500 dark:text-slate-400">
-        PSS: My resume can be found <TextLink href="/Resume.pdf" title="My Resume">here</TextLink>, or via the File icon in the Footer.
+        PSS: My resume can be found <TextLink href="/Resume.pdf" title="My Resume">here</TextLink>,
+        or via the File icon in the Footer.
       </p>
     </div>
   </section>

@@ -1,20 +1,17 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-const pageName: string = "404"
+const pageName: string = "404";
 ---
-<BaseLayout pageName={pageName}>
+
+<BaseLayout {pageName}>
   <section class="flex flex-col justify-center items-center gap-2 flex-1">
     <div>
-      <h1 class="text-center text-3xl">
-        Oops - this page doesn't exist!
-      </h1>
+      <h1 class="text-center text-3xl">Oops - this page doesn't exist!</h1>
     </div>
     <div>
       <br />
-      <button onclick="window.history.go(-1)">
-        Go back?
-      </button>
+      <button onclick="window.history.go(-1)"> Go back? </button>
     </div>
   </section>
 </BaseLayout>
