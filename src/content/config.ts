@@ -8,6 +8,7 @@ const baseSchema = z.object({
 const workSchema = baseSchema.extend({
   employer: z.string(),
   lastDate: z.date().nullable(),
+  logo: z.string().optional(),
 })
 
 const projectSchema = baseSchema.extend({
