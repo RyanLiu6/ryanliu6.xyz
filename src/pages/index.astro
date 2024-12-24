@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import { TextLink } from "@ryanliu6/xi";
+import { textBase } from "@ryanliu6/xi/styles";
 
 const pageName: string = "Home Page";
 ---
@@ -10,7 +11,7 @@ const pageName: string = "Home Page";
   <section class="flex flex-col flex-1 justify-center">
     <h1 class="font-bold text-3xl py-4">Hey there! I'm Ryan 👋</h1>
     <div class="flex flex-col gap-6">
-      <p>
+      <p class={`${textBase} !text-base`}>
         I'm a Software Engineer based in Vancouver, Canada, and I'm passionate about Software,
         Games, Plamo, and all things in between. Currently attempting on something cool with <TextLink
           href="https://foundryvtt.com"
