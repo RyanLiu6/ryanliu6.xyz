@@ -3,7 +3,7 @@ interface Props {
   pageName: string,
 }
 
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 import Header from "@/components/Header.tsx";
 import Footer from "@/components/Footer.tsx";
@@ -19,7 +19,7 @@ const nameWithName: string = pageName.trim() + " - Ryan Liu";
 		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<ViewTransitions />
+		<ClientRouter />
 		<title>{nameWithName}</title>
 		<script is:inline>
 			const THEME_KEY = "theme";
