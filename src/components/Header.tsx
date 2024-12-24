@@ -12,7 +12,7 @@ const navList = [
 
 const Header = () => {
   const headerClass = classNames(marginalBorder, "flex flex-row w-full relative justify-between");
-  const navClass = classNames(shadowBorder, "hidden md:flex");
+  const navClass = classNames(shadowBorder, "hidden md:flex text-base");
   const menuClass = classNames(shadowBorder, "flex md:hidden");
 
   return (
