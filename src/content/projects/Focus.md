@@ -2,7 +2,7 @@
 name: "Focus"
 description: "Self-hosted multi-media home server."
 link: "https://github.com/RyanLiu6/focus/"
-order: 4
+order: 3
 languages: ["Python", "Shell"]
 ---
 

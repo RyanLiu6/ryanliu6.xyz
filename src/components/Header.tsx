@@ -7,8 +7,8 @@ const navList = [
   { name: "Home", href: "/" },
   { name: "Work", href: "/work" },
   { name: "Projects", href: "/projects" },
+  { name: "md", href: "/markdown" },
   { name: "Plamo", href: "/plamo" },
-  { name: "Markdown", href: "/markdown" },
 ];
 
 const Header = () => {

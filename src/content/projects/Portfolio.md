@@ -2,7 +2,7 @@
 name: "ryanliu6.xyz"
 description: "The website you're currently on 😄"
 link: "https://ryanliu6.xyz/"
-order: 2
+order: 1
 languages: ["TypeScript", "JavaScript", "Astro"]
 ---
 
