@@ -8,6 +8,9 @@ import { ClientRouter } from "astro:transitions";
 import Header from "@/components/Header.tsx";
 import Footer from "@/components/Footer.tsx";
 import { bodyBorder, mainBorder } from "@ryanliu6/xi/styles";
+import ThemeScript from "@ryanliu6/xi/ThemeScript.astro";
+
+import "@/styles/base.css";
 
 const { pageName } = Astro.props;
 const nameWithName: string = pageName.trim() + " - Ryan Liu";
@@ -22,19 +25,7 @@ const nameWithName: string = pageName.trim() + " - Ryan Liu";
     <meta name="generator" content={Astro.generator} />
     <ClientRouter />
     <title>{nameWithName}</title>
-    <script is:inline>
-      const THEME_KEY = "theme";
-      const THEME_DARK = "dark";
-
-      if (typeof localStorage !== "undefined") {
-        const storedTheme = localStorage.getItem(THEME_KEY) || THEME_DARK;
-        if (storedTheme == THEME_DARK) {
-          document.documentElement.classList.add(THEME_DARK);
-        } else {
-          document.documentElement.classList.remove(THEME_DARK);
-        }
-      }
-    </script>
+    <ThemeScript />
   </head>
   <body class={bodyBorder}>
     <Header client:load />
