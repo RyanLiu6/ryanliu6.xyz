@@ -18,8 +18,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(react@19.2.0)
       '@ryanliu6/xi':
-        specifier: 3.0.0
-        version: 3.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: 3.1.0-alpha.1
+        version: 3.1.0-alpha.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -823,8 +823,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@ryanliu6/xi@3.0.0':
-    resolution: {integrity: sha512-87WiuCRPASNuw3E/2B7iKLLXiKzEK2WttqYGGbcmHaQ5nL3eVMT+Owq/MT/ECcUPaa1fMM2Iri5E1MdxlBIHQg==}
+  '@ryanliu6/xi@3.1.0-alpha.1':
+    resolution: {integrity: sha512-Gxa0sGlbitmMKzCkQTsfq4Hd+QtB/rdVMZXHjUXYPyT4Us3BbWFBhtT68LM5e+AYWyEE4NzOHmkQI4HylunrMg==}
     peerDependencies:
       react: ^19.0.0
       react-dom: ^19.0.0
@@ -4120,7 +4120,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.52.4':
     optional: true
 
-  '@ryanliu6/xi@3.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@ryanliu6/xi@3.1.0-alpha.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@headlessui/react': 2.2.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@heroicons/react': 2.2.0(react@19.2.0)
