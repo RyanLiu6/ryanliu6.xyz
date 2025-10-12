@@ -11,15 +11,9 @@ importers:
       '@astrojs/react':
         specifier: ^4.4.0
         version: 4.4.0(@types/node@24.6.2)(@types/react-dom@19.2.0(@types/react@19.2.0))(@types/react@19.2.0)(jiti@2.6.1)(lightningcss@1.30.1)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(yaml@2.8.1)
-      '@headlessui/react':
-        specifier: ^2.2.0
-        version: 2.2.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@heroicons/react':
-        specifier: ^2.2.0
-        version: 2.2.0(react@19.2.0)
       '@ryanliu6/xi':
-        specifier: 3.1.0-alpha.2
-        version: 3.1.0-alpha.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: 3.1.0
+        version: 3.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -823,8 +817,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@ryanliu6/xi@3.1.0-alpha.2':
-    resolution: {integrity: sha512-06xqmuAnQC0byl1tB9CX3MWqLBKGsFhQMzGOxFZUeBohASqoprHjqq5WCJu+APfAbjDhABuShFaGpVfLfEBk4w==}
+  '@ryanliu6/xi@3.1.0':
+    resolution: {integrity: sha512-qdLuFotn1rL3HJBOjdYi5glXPA5GdGodmc3vxXSqe0y4cDeRMDCG+MYeBvhMuh+mahjDZBx2N2BDlOQ5L/nJCg==}
     peerDependencies:
       react: ^19.0.0
       react-dom: ^19.0.0
@@ -4120,7 +4114,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.52.4':
     optional: true
 
-  '@ryanliu6/xi@3.1.0-alpha.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@ryanliu6/xi@3.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@headlessui/react': 2.2.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@heroicons/react': 2.2.0(react@19.2.0)
