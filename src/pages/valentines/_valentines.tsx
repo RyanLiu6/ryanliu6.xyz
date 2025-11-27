@@ -1,83 +1,69 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
-// The base code is directly from `https://gist.github.com/tnarla/0c09a11fea366145ba684fe6ebf578c5`.
-// Slight modifications were made to loop the phrases and some tailwind styling
+const PHRASES = [
+  "No",
+  "Are you sure?",
+  "Really sure?",
+  "Think again!",
+  "Last chance!",
+  "Surely not?",
+  "You might regret this!",
+  "Give it another thought!",
+  "Are you absolutely certain?",
+  "This could be a mistake!",
+  "Have a heart!",
+  "Don't be so cold!",
+  "Change of heart?",
+  "Wouldn't you reconsider?",
+  "Is that your final answer?",
+  "You're breaking my heart ;(",
+] as const;
+
+const GIFS = {
+  asking: "https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif",
+  accepted: "https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif",
+} as const;
+
 const ValentinesPage = () => {
-  const [noCount, setNoCount] = useState<number>(0);
-  const [yesPressed, setYesPressed] = useState<boolean>(false);
-  const [loop, setLoop] = useState<number>(0);
+  const [noCount, setNoCount] = useState(0);
+  const [yesPressed, setYesPressed] = useState(false);
 
-  const phrases: string[] = [
-    "No",
-    "Are you sure?",
-    "Really sure?",
-    "Think again!",
-    "Last chance!",
-    "Surely not?",
-    "You might regret this!",
-    "Give it another thought!",
-    "Are you absolutely certain?",
-    "This could be a mistake!",
-    "Have a heart!",
-    "Don't be so cold!",
-    "Change of heart?",
-    "Wouldn't you reconsider?",
-    "Is that your final answer?",
-    "You're breaking my heart ;(",
-  ];
+  const noButtonText = useMemo(() => PHRASES[noCount % PHRASES.length], [noCount]);
 
-  let yesButtonSize: number = 0;
+  const yesButtonSize = useMemo(() => noCount * 20 + 16, [noCount]);
 
-  if (loop > 0) {
-    yesButtonSize = (noCount + loop * phrases.length) * 20 + 16;
-  } else {
-    yesButtonSize = noCount * 20 + 16;
+  const handleNoClick = () => setNoCount((prev) => prev + 1);
+
+  const handleYesClick = () => setYesPressed(true);
+
+  if (yesPressed) {
+    return (
+      <div className="flex flex-col items-center justify-center h-screen -mt-16">
+        <img src={GIFS.accepted} alt="Celebration" />
+        <div className="text-4xl font-bold my-4">Ok yay!!!</div>
+      </div>
+    );
   }
-
-  const handleNoClick = () => {
-    setNoCount(noCount + 1);
-  };
-
-  const getNoButtonText = () => {
-    if (noCount >= phrases.length) {
-      setLoop(loop + 1);
-      setNoCount(0);
-    }
-
-    return phrases[noCount];
-  };
 
   return (
     <div className="flex flex-col items-center justify-center h-screen -mt-16">
-      {yesPressed ? (
-        <>
-          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="text-4xl font-bold my-4">Ok yay!!!</div>
-        </>
-      ) : (
-        <>
-          <img
-            className="h-[200px]"
-            src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
-          />
-          <h1 className="text-4xl my-4">Will you be my Valentine?</h1>
-          <div>
-            <button
-              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-4"
-              style={{ fontSize: yesButtonSize }}
-              onClick={() => setYesPressed(true)}
-            >
-              Yes
-            </button>
-            <button
-              onClick={handleNoClick}
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-            >
-              {noCount === 0 ? "No" : getNoButtonText()}
-            </button>
-          </div>
-        </>
-      )}
+      <img className="h-[200px]" src={GIFS.asking} alt="Bear with roses" />
+      <h1 className="text-4xl my-4">Will you be my Valentine?</h1>
+      <div className="flex gap-4">
+        <button
+          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition-all"
+          style={{ fontSize: yesButtonSize }}
+          onClick={handleYesClick}
+        >
+          Yes
+        </button>
+        <button
+          className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          onClick={handleNoClick}
+        >
+          {noButtonText}
+        </button>
+      </div>
     </div>
   );
 };
