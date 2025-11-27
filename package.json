@@ -23,7 +23,6 @@
     ]
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.0",
     "@ryanliu6/xi": "3.1.0",
     "classnames": "^2.5.1",
     "react": "^19.0.0",
